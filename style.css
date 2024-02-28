@@ -1,0 +1,67 @@
+/* selector { properties} */
+* {
+    padding: 0;
+    /* inner padding resetting */
+    margin: 0;
+    /* outter padding resetting */
+}
+
+:root {
+    --elColor: #7bcbad;
+    --fontSize: 50px;
+    --fontcolor: red;
+    --textPosition: center;
+
+}
+
+
+.body {
+    height: 100vh;
+    background-color: goldenrod;
+
+    display: grid;
+    /* richtet die kinder komponenten in ein gleichmässigeren raster aus */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+}
+
+.el {
+    background-color: var(--elColor) !important;
+    font-size: var(--fontSize);
+    color: var(--fontcolor);
+    text-align: var(--textPosition);
+
+}
+
+
+.nav {
+    background-color: turquoise;
+    grid-column: 1 /span 12;
+    grid-row: 1, span 1;
+}
+
+.footer {
+    background-color: turquoise;
+    grid-column: 1 / span 12;
+    grid-row: 12 /span 1;
+}
+
+.rbar {
+    background-color: rgb(69, 3, 251);
+    grid-column: 11 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.lbar {
+    background-color: rgb(69, 3, 251);
+    grid-column: 1 /span 2;
+    grid-row: 2 / span 10;
+}
+
+.content {
+    background-color: goldenrod;
+    grid-column: 3 / span 8;
+    grid-row: 2 /span 10;
+
+}
